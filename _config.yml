@@ -42,7 +42,7 @@ SEOTitle: Web Journey
 email: hexo-theme-livemylife@gmail.com
 description: "It's an IT blog..."
 keyword: "livemylife,IT  blog,Blog"
-header-img: img/header_img/newhome_bg.jpg
+header-img: img/scenery/sea_bg1.png  #header_img/newhome_bg.jpg 
 archives-img: img/header_img/archive_bg2.jpg
 
 
