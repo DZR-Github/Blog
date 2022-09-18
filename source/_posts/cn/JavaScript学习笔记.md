@@ -3,7 +3,7 @@ title: JavaScript学习笔记
 catalog: true
 date: 2022-09-18 19:51:55
 subtitle:
-header-img: /img/scenery/wave_bg.jpg
+header-img: /img/scenery/wave_bg1.jpg
 tags: web
 categories: JavaScript
 ---
@@ -22,7 +22,7 @@ categories: JavaScript
 
 ### script标签
 
-​    在不使用defer和async属性的情况下，所有<script>元素会依照它们在网页中出现的次序被解释
+​    在不使用defer和async属性的情况下，所有“script”元素会依照它们在网页中出现的次序被解释
 
 ​	defer：使脚本延迟解析、执行（延迟执行脚本）
 
