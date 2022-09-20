@@ -23,7 +23,7 @@ categories: Web
 
 ### script标签
 
-​    在不使用defer和async属性的情况下，所有“script”元素会依照它们在网页中出现的次序被解释
+​    在不使用defer和async属性的情况下，所有`<script>`元素会依照它们在网页中出现的次序被解释
 
 ​	defer：使脚本延迟解析、执行（延迟执行脚本）
 
@@ -114,7 +114,7 @@ console.log(typeof message);
   - 无符号右移    >>>
     无符号右移会将数值的所有 32 位都向右移
 
-- **指数操作符     ****
+- **指数操作符**     **
 
 ​		如：`3**2       // 9`
 
@@ -288,7 +288,7 @@ console.log(typeof message);
 
 ### 基本引用类型
 
-##### :one:Date
+##### 1、Date
 
 创建日期对象：
 
@@ -311,7 +311,7 @@ console.log(date1 > date2); // false
 
 
 
-##### :two:Number
+##### 2、Number
 
 创建Number对象：
 
@@ -328,7 +328,7 @@ console.log(date1 > date2); // false
 
 
 
-##### :three:String
+##### 3、String
 
 **创建String对象：**
 
@@ -372,27 +372,27 @@ stringObject.replace(regexp/substr,replacement)
 //   regexp/substr: 要替换的字串或者正则表达式（可添加g来选择全局替换）    replacement:替换文本
 ```
 
-##### :five:Math
+##### 4、Math
 
 **min():** 获取最小值。
 
 **max()**：获取最大值。
 
-**ceil()：**向上舍入为最接近的整数。
+**ceil()**：向上舍入为最接近的整数。
 
-**floor()：**向下舍入为最接近的整数。
+**floor()**：向下舍入为最接近的整数。
 
-**round()：**四舍五入。
+**round()**：四舍五入。
 
-**fround()：**返回最接近的单精度浮点值表示。
+**fround()**：返回最接近的单精度浮点值表示。
 
-**random()：**返回一个0~1范围内的随机数。
+**random()**：返回一个0~1范围内的随机数。
 
 
 
 ### 集合引用类型
 
-#### :one:object
+#### 1、object
 
 创建object实例：
 
@@ -421,7 +421,7 @@ person['name'] ：适用于属性名中含有可能会导致语法错误，例�
 
 person.name：常用，除了上述情况均可使用此方式。
 
-#### :two:Array
+#### 2、Array
 
 数组中的每个槽位可以存储任意类型的数据，数组的大小是动态的，会随数据添加而自动增长。
 
@@ -518,9 +518,9 @@ console.log(colors3); // ["red", "green", "blue", "pink", "cyan"]
 
 
 
-**其他：**join()、toLocaleString() 、toString() 、valueOf()
+**其他**   join()、toLocaleString() 、toString() 、valueOf()
 
-#### :three:Map
+#### 3、Map
 
 与Object类似，但存在一些差异
 
@@ -561,7 +561,7 @@ set() 方法返回映射实例，因此可以把多个操作连缀起来，包�
 3. 查找速度：如果代码涉及大量查找操作，那么某些情况下可能选择 Object 更好一些。
 4. 删除性能：Map 的 delete() 操作都比插入和查找更快。如果代码涉及大量删除操作，那么毫无疑问应该选择 Map 。
 
-#### :four:Set
+#### 4、Set
 
 Set像是加强版的Map，值不可重复，有序，只有值无键（键与值相同）
 
@@ -575,7 +575,7 @@ const s1 = new Set(["val1", "val2", "val3"]);
 alert(s1.size); // 3
 ```
 
-初始化之后，可以使用 **add()** 增加值，使用 **has()** 查询，通过 **size** 取得元素数量，以及使用 **delete()**和 **clear()** 删除元素
+初始化之后，可以使用 **add()** 增加值，使用 **has()** 查询，通过 **size** 取得元素数量，以及使用 **delete()** 和 **clear()** 删除元素
 
 ```
 const s = new Set();
@@ -597,7 +597,7 @@ alert(s.size); // 0
 
 **迭代器：**
 
-可以通过**value()**方法及其别名方法**keys()**取得迭代器
+可以通过  **value()**  方法及其别名方法 **keys()** 取得迭代器
 
 可以把集合转换为数组：
 
@@ -942,7 +942,7 @@ console.log(ClassDeclaration); // class ClassDeclaration {}
 
 #### 重排(Reflow)
 
-**概念：**当DOM的变化影响了元素的几何信息(元素的的位置和尺寸大小)，浏览器需要重新计算元素的几何属性，将其安放在界面中的正确位置，这个过程叫做重排。重排也叫回流，简单的说就是重新生成布局，重新排列元素。
+**概念**   当DOM的变化影响了元素的几何信息(元素的的位置和尺寸大小)，浏览器需要重新计算元素的几何属性，将其安放在界面中的正确位置，这个过程叫做重排。重排也叫回流，简单的说就是重新生成布局，重新排列元素。
 
 **触发重排的情况**
 
@@ -980,11 +980,11 @@ console.log(ClassDeclaration); // class ClassDeclaration {}
 
 **减少重排次数**
 
-**:one:==样式集中改变==**
+**1、样式集中改变**
 
 不要频繁的操作样式，对于一个静态页面来说，明智且可维护的做法是更改类名而不是修改样式，对于动态改变的样式来说，相较每次微小修改都直接触及元素，更好的办法是统一在 `cssText` 变量中编辑。虽然现在大部分现代浏览器都会有 `Flush` 队列进行渲染队列优化，但是有些老版本的浏览器比如IE6的效率依然低下。
 
-==使用cssText时，要加上原来的样式的值，因为原来的cssText值会被销毁==
+使用cssText时，要加上原来的样式的值，因为原来的cssText值会被销毁
 
 ```
 // bad
@@ -1003,7 +1003,7 @@ el.className += " className";
 
 ```
 
-:two:**分离读写操作**
+**2、分离读写操作**
 
 DOM 的多个读操作（或多个写操作），应该放在一起。不要两个读操作之间，加入一个写操作。
 
@@ -1031,7 +1031,7 @@ div.style.bottom = curBottom + 1 + 'px';
 
 > 当我们修改了元素的几何属性，导致浏览器触发重排或重绘时。它会把该操作放进渲染队列，等到队列中的操作到了一定的数量或者到了一定的时间间隔时，浏览器就会批量执行这些操作。
 
-:three:**将 DOM 离线**
+​**3、将 DOM 离线**
 
 “离线”意味着不在当前的 DOM 树中做修改，我们可以这样做：
 
@@ -1045,11 +1045,11 @@ div.style.bottom = curBottom + 1 + 'px';
 
 
 
-:four:**使用 absolute 或 fixed 脱离文档流**
+**4、使用 absolute 或 fixed 脱离文档流**
 
 使用绝对定位会使的该元素单独成为渲染树中 `body` 的一个子元素，重排开销比较小，不会对其它节点造成太多影响。当你在这些节点上放置这个元素时，一些其它在这个区域内的节点可能需要重绘，但是不需要重排。
 
-:five:**优化动画**
+**5、优化动画**
 
 * 可以把动画效果应用到 `position`属性为 `absolute` 或 `fixed` 的元素上，这样对其他元素影响较小。
 
@@ -1076,7 +1076,7 @@ div.style.bottom = curBottom + 1 + 'px';
 
 #### 重绘(Repaint)
 
-**概念：**当一个元素的外观发生改变，但没有改变布局,重新把元素外观绘制出来的过程，叫做重绘。
+**概念**   当一个元素的外观发生改变，但没有改变布局,重新把元素外观绘制出来的过程，叫做重绘。
 
 **常见的引起重绘的属性：**
 
@@ -1101,9 +1101,9 @@ div.style.bottom = curBottom + 1 + 'px';
 
 语法：
 
-:one:`let fragment = document.createDocumentFragment();`
+1、`let fragment = document.createDocumentFragment();`
 
-:two:`let fragment = new DocumentFragment();`
+2、`let fragment = new DocumentFragment();`
 
 代码示例：
 
@@ -1133,7 +1133,7 @@ div.style.bottom = curBottom + 1 + 'px';
 
 ## 区分
 
-:one:对象
+1、对象
 
 - 对象的键，又称对象的属性
 
@@ -1152,7 +1152,7 @@ div.style.bottom = curBottom + 1 + 'px';
 
   
 
-:two:原型对象(所有的 JavaScript 对象都会从一个 prototype（原型对象）中继承属性和方法)
+2、原型对象(所有的 JavaScript 对象都会从一个 prototype（原型对象）中继承属性和方法)
 
 对象的构造器(一个已存在构造器的对象中是不能添加新的属性)
 
@@ -1167,21 +1167,21 @@ function Person(first, last, age, eyecolor) {
  var myMother = new Person("Sally", "Rally", 48, "green");
 ```
 
-`Person.nationality = "English";`     :x:     (错误做法)
+`Person.nationality = "English";`      (错误做法)
 
 使用 prototype 属性就可以给对象的构造函数添加新的属性
 
-`Person.prototype.nationality = "English";`      :white_check_mark:        (正确做法)
+`Person.prototype.nationality = "English";`        (正确做法)
 
 
 
-:one:children
+**1、children**
 
 children 属性返回元素的子元素的集合，是一个 HTMLCollection 对象。
 
 
 
-:two:childNodes
+**2、childNodes**
 
 childNodes 属性返回包含被选节点的子节点的 NodeList。
 
@@ -1207,7 +1207,7 @@ childNodes 属性返回包含被选节点的子节点的 NodeList。
 
 存储在内存中代表特定信息的东西，本质上是010101……
 
-**特点：**可传递、可运算
+**特点**   可传递、可运算
 
 #### Q4：严格区别变量类型和数据类型？
 
