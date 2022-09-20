@@ -2,10 +2,11 @@
 title: JavaScript学习笔记
 catalog: true
 date: 2022-09-18 19:51:55
-subtitle:
+subtitle: " "
 header-img: /img/scenery/wave_bg1.jpg
-tags: web
-categories: JavaScript
+sticky: 0
+tags: JavaScript
+categories: Web
 ---
 
 ## JavaScript学习笔记
