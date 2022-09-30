@@ -18,7 +18,7 @@ categories: 小程序
 
 `app.json`是当前小程序的全局配置，包括了小程序的所有页面路径、页面表现、网络超时时间、底部tab等。普通快速启动项目里边的`app.json`配置
 
-```
+```json
 {
  "pages":[
   "pages/index/index",
@@ -75,7 +75,7 @@ categories: 小程序
 
 `<view> {{ message }} </view>`
 
-```
+```js
 Page({
  data: {
   message: 'Hello MINA!'
@@ -97,7 +97,7 @@ Page({
 
 `<view> {{a + b}} + {{c}} + d </view>`
 
-```
+```js
 Page({
  data: {
   a: 1,
@@ -115,7 +115,7 @@ Page({
 
 `<view>{{"hello" + name}}</view>`
 
-```
+```js
 Page({
  data:{
   name: 'MINA'
@@ -154,13 +154,13 @@ wx:key="*this"
 
 代码：
 
-```
+```html
 <view wx:for="{{array}}" wx:key="id">
 {{index}}: {{item.message}}
 </view>
 ```
 
-```
+```js
 Page({
  data: {
   array: [{
@@ -178,7 +178,7 @@ Page({
 
 渲染一个包含多节点的结构块block最终不会变成真正的dom元素
 
-```
+```html
 <block wx:for="{{[1, 2, 3]}}" wx:key="*this" >
  <view> {{index}}: </view>
  <view> {{item}} </view>
@@ -191,7 +191,7 @@ Page({
 
 在框架中，使用`wx:if="{{condition}}"` 来判断是否需要渲染该代码块：
 
-```
+```html
  <view wx:if="{{false}}">1</view>
  <view wx:elif="{{true}}">2</view>
  <view wx:else>3</view>
@@ -221,7 +221,7 @@ Page({
 
 #### 2、page
 
-```
+```js
 Page({
  // 绑定的事件
  handleInput: function(e) {
@@ -243,7 +243,7 @@ Page({
 
 3、事件触发时获取数据
 
-```
+```js
  handleInput: function(e) {
   // {item:100}
  console.log(e.currentTarget.dataset)
@@ -280,14 +280,14 @@ WXSS是一套样式语言，用于描述`WXML`的组件样式。
 
 实例代码：
 
-```
+```css
 /** common.wxss **/
 .small-p {
  padding:5px;
 }
 ```
 
-```
+```css
 /** app.wxss **/
 @import "common.wxss";
 .middle-p {
@@ -327,7 +327,7 @@ WXSS是一套样式语言，用于描述`WXML`的组件样式。
 
 代替原来的`div` 标签
 
-```
+```html
  <view hover-class="h-class">
 点击我试试
  </view>
@@ -339,7 +339,7 @@ WXSS是一套样式语言，用于描述`WXML`的组件样式。
   - 长按文字可以复制
   - 可以对空格  回车等进行编码
 
-  ```
+  ```html
    <text selectable="{{false}}" decode="{{false}}">
    普&nbsp;通
    </text>
@@ -365,7 +365,7 @@ WXSS是一套样式语言，用于描述`WXML`的组件样式。
 
 代码:
 
-```
+```html
 <button
  type="default"
  size="{{defaultSize}}"
@@ -419,7 +419,7 @@ open-type的值：
 
 代码：
 
-```
+```js
 Page({
  data: {
   iconSize: [20, 30, 40, 50, 60, 70],
@@ -436,7 +436,7 @@ Page({
 
 
 
-```
+```html
 <view class="group">
  <block wx:for="{{iconSize}}">
   <icon type="success" size="{{item}}"/>
@@ -476,11 +476,17 @@ Page({
 | snap-to-edge           | boolean | false             | 否   | 当 swiper-item 的个数大于等于 2，关闭 circular 并且开启 previous-margin 或 next-margin 的时候，可以指定这个边距是否应用到第一个、最后一个元素 |
 | display-multiple-items | number  | 1                 | 否   | 同时显示的滑块数量                                           |
 
-```
+```html
 <swiper autoplay interval="1000" circular indicator-dots indicator-color="#0094ff" indicator-active-color="#ff0094">
-  <swiper-item> <image mode="widthFix" src="bAeF_!!44-0-lubanu.jpg" /> </swiper-item>
-  <swiper-item> <image mode="widthFix" src="pXXSutbFXXX.jpg_q50.jpg" /> </swiper-item>
-  <swiper-item> <image mode="widthFix" src="s1C8zCFJj97b_!!37-0-lubanu.jpg" /> </swiper-item>
+  <swiper-item> 
+      <image mode="widthFix" src="bAeF_!!44-0-lubanu.jpg" /> 	
+    </swiper-item>
+  <swiper-item> 
+      <image mode="widthFix" src="pXXSutbFXXX.jpg_q50.jpg" /> 	
+    </swiper-item>
+  <swiper-item> 
+      <image mode="widthFix" src="s1C8zCFJj97b_!!37-0-lubanu.jpg" /> 
+    </swiper-item>
 </swiper>
 ```
 
@@ -492,7 +498,7 @@ Page({
 
 代码：
 
-```
+```html
  <radio-group bindchange="handleChange">
   <radio color="red" value="male">男</radio>
   <radio color="red" value="female" >女</radio>
@@ -500,7 +506,7 @@ Page({
  <view>您选中的是:{{gender}}</view>
 ```
 
-```
+```js
 Page({
  data: {
   gender: ""
@@ -523,7 +529,7 @@ Page({
 
 复选框
 
-```
+```html
 <view>
  <checkbox-group bindchange="handleItemChange">
   <checkbox value="{{item.value}}" wx:for="{{list}}" wx:key="id">
@@ -536,7 +542,7 @@ Page({
 </view>
 ```
 
-```
+```js
 Page({
  data: {
   list:[
@@ -574,7 +580,199 @@ Page({
 
 
 
-## 自定义组件
+## [自定义组件](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/)
+
+类似于页面，一个自定义组件由`json`  `wxml`   `wxss`   4个文件组成
+
+在根目录新建components文件夹，进而在此新建各种组件。
+
+##### 1、声明组件
+
+首先在组件的`json` 文件中进行自定义组件声明
+
+```json
+{
+ "component": true
+}
+```
+
+##### 2、编辑组件
+
+在组件的`wxml`  文件中编写组件模板，在`wxss` 文件中加入组件样式，`slot`  表示插槽
+
+```html
+<view class="inner">
+{{innerText}}
+  <slot></slot>
+</view>
+```
+
+> 在组件wxss文件中不应使用ID选择器、属性选择器和标签名选择器。
+
+```css
+.inner {
+ color: skyblue;
+}
+```
+
+##### 3、注册组件
+
+在组件的`js`   文件中，需要使用`Component()`  来注册组件，并提供组件的属性定义、内部数据和自定义方法
+
+```js
+Component({
+ properties: {
+  // 这里定义了innerText属性，属性值可以在组件使用时指定
+  innerText: {
+   // 期望要的数据是 string类型
+   type: String,
+   value: 'default value',
+ }
+},
+ data: {
+  // 这里是一些组件内部数据
+  someData: {}
+},
+ methods: {
+  // 这里是一个自定义方法
+  customMethod: function(){}
+}
+})
+```
+
+##### 4、声明引入自定义组件
+
+在页面的  `json`    文件中进行引用声明。还要提供对应的组件名和组件路径
+
+`index.wxml`  文件
+
+```json
+{
+  "usingComponents": {
+    "component-tag-name": "path/to/the/custom/component"
+  }
+}
+```
+
+使用组件示例：
+
+```html
+<view>
+  <!-- 以下是对一个自定义组件的引用 -->
+  <component-tag-name inner-text="Some text"></component-tag-name>
+</view>
+```
 
 
+
+自定义组件传参：
+
+- 父传子：父组件通过属性的方式给子组件传递参数
+
+- 子传父：子组件通过事件的方式向父组件传递参数
+- 父组件通过`this.selectComponent`  方法获取子组件实例对象，直接访问组件的任意数据和方法
+
+监听事件
+
+```html
+<!-- 当自定义组件触发“myevent”事件时，调用“onMyEvent”方法 -->
+<component-tag-name bindmyevent="onMyEvent" />
+```
+
+```js
+Page({
+  onMyEvent: function(e){
+    e.detail // 自定义组件触发事件时提供的 detail 对象
+  }
+})
+```
+
+触发事件
+
+自定义组件触发事件时，需要使用`triggerEvent`   方法。指定事件名、detail对象和事件选项
+
+```html
+<!-- 在自定义组件中 -->
+<button bindtap="onTap">点击这个按钮将触发“myevent”事件</button>
+```
+
+```js
+Component({
+  properties: {},
+  methods: {
+    onTap: function(){
+      var myEventDetail = {} // detail对象，提供给事件监听函数
+      var myEventOption = {} // 触发事件的选项
+      this.triggerEvent('myevent', myEventDetail, myEventOption)
+    }
+  }
+})
+```
+
+
+
+子传父实例(点击Button修改父组件数据)
+
+`index.wxml`  文件
+
+```html
+<component bindTest="hanldeTest" message="{{message}}"></component>
+```
+
+`index.js`  文件
+
+```js
+Page({
+ data: {
+  message: "message111"
+ },
+ hanldeTest(e) {
+  this.setData({
+   message: e.detail
+  })
+ }
+})
+```
+
+`component.wxml`   文件
+
+```html
+<view>
+ {{message}}
+ <button bindtap="handleButton">Button</button>
+ <slot></slot>
+</view>
+```
+
+`component.js`   文件
+
+```js
+Component({
+ properties: {
+  message: {
+   type: String,
+   value: "default message"
+  }
+ },
+ methods: {
+  handleButton(e) {
+   this.triggerEvent("Test", "message change");
+  },
+ }
+})
+```
+
+
+
+
+
+## 小程序生命周期
+
+小程序生命周期分为应用生命周期和页面生命周期
+
+#### [应用生命周期](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html)
+
+
+
+#### [页面生命周期](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html)
 
