@@ -10,6 +10,18 @@ categories: Web
 
 
 
+### 如何添加CSS ？
+
+##### 三种使用CSS的方法：
+
+- 外部CSS
+- 内部CSS
+- 行内CSS
+
+> 行内样式拥有最高优先级，会覆盖外部和内部样式以及浏览器默认样式
+
+
+
 ### CSS单位
 
 绝对长度：cm、mm、px、pc、pt、in
@@ -28,6 +40,8 @@ categories: Web
 | ex   | 依赖于英文字母x的高度                                        |
 | %    |                                                              |
 
+> 勿在属性值和单位之间添加空格（例如：`margin：20     px；`）。正确的写法是：`margin：20px；`   。
+
 
 
 ### CSS选择器
@@ -38,7 +52,7 @@ categories: Web
 
 - 子选择器（>）：`div>p` : div元素的子代元素中所有p元素
 - 相邻兄弟选择器（+）：`div+p`：紧随div元素之后的p元素（“相邻”的意思是“紧随其后”）
-- 通用兄弟选择器（~）：`div~p：与div元素同级的所有p元素
+- 通用兄弟选择器（~）：`div~p`：与div元素同级的所有p元素
 
 ##### CSS伪类（根据特定状态选取元素）
 
@@ -106,7 +120,49 @@ categories: Web
 
 #### css颜色
 
-![](https://raw.githubusercontent.com/DZR-Github/IMGS/main/202206022103513.png)
+主要有RGB颜色、HEX颜色、HSL颜色
+
+##### RGB值
+
+rgb(red,green,blue)
+
+##### RGBA值
+
+rgba(red,green,blue,alpha)
+
+> RGB的扩展，指定了颜色的不透明度，alpha参数是介于0.0（完全透明）和1.0（完全不透明）之间的数字
+
+##### HEX值
+
+#rrggbb
+
+> 使用十六进制值指定颜色,其中rr（红色）、gg（绿色）和bb（蓝色）是介于00和ff之间的十六进制值，例如：#ffffff（白色）
+
+##### HSL值
+
+hsl(hue,saturation,lightness)
+
+> 色相（hue）是色轮上从0~360的度数。0是红色，120是绿色，240是蓝色。
+>
+> 饱和度（saturation）是一个百分比值，0%是灰色阴影，而100%是全色。
+>
+> 亮度（lightness）也是百分比，0%是黑色，50%是既不明也不暗，100%是白色。
+>
+> 例如：hsl(147,50%,47%) 浅绿色
+
+##### HSLA值
+
+hsla(hue,saturation,lightness,alpha)
+
+> HSL的扩展，指定了颜色的不透明度，alpha参数是介于0.0（完全透明）和1.0（完全不透明）之间的数字
+
+
+
+##### [在线调色板](https://www.sojson.com/web/panel.html)
+
+
+
+
 
 #### 透明度：
 
@@ -238,29 +294,81 @@ text-shadow
 
 
 
+#### CSS边框
+
+CSS border属性可以设置边框的样式、宽度和颜色。
+
+边框样式  `border-style`   属性有以下值：
+
+- `dotted` - 定义点线边框
+- `dashed` - 定义虚线边框
+- `solid` - 定义实线边框
+- `double` - 定义双边框
+- `groove` - 定义 3D 坡口边框。效果取决于 border-color 值
+- `ridge` - 定义 3D 脊线边框。效果取决于 border-color 值
+- `inset` - 定义 3D inset 边框。效果取决于 border-color 值
+- `outset` - 定义 3D outset 边框。效果取决于 border-color 值
+- `none` - 定义无边框
+- `hidden` - 定义隐藏边框
+
+边框宽度  `border-width`  
+
+边框颜色  `border-color`  
+
+可以为不同的边设置不同的边框，如：
+
+```css
+div {
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+}
+```
+
+简写边框属性（width  style  color)
+
+```css
+p {
+  border: 5px solid red;
+}
+```
+
+圆角边框  `border-radius`  
 
 
 
+#### CSS 外边距  `margin`  
+
+外边距合并：当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
+
+> - margin: 25px 50px 75px 100px;
+>
+> 上外边距25px，右外边距50px，下外边距75px，左外边距100px
+>
+> - margin：25px  50px  75px；
+>
+> 上外边距25px，左右外边距50px，下外边距75px
+>
+> - margin：25px  50px；
+>
+> 上下外边距25px，左右外边距50px
 
 
 
+#### CSS内边距  `padding`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+> - padding : 25px  50px  75px  100px;
+>
+> 上内边距25px，右内边距50px，下内边距75px，左内边距100px
+>
+> - padding：25px  50px  75px；
+>
+> 上内边距25px，左右内边距50px，下内边距75px
+>
+> - padding：25px  50px；
+>
+> 上下内边距25px，左右内边距50px
 
 
 
