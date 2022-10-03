@@ -448,6 +448,74 @@ CSS有如下轮廓属性：
 
 
 
+#### CSS边框图像
+
+`border-image`   属性允许指定图像为边框，而不是包围普通边框。
+
+
+
+#### CSS多重背景
+
+可以通过  `background-image`  属性为一个元素添加多幅背景图像。不同的背景图像用逗号隔开，并且图像会彼此重叠，其中第一幅图像最靠近观看者。
+
+> 相关属性：background-size、background-repeat、background-origin、background-clip
+
+
+
+
+
+#### [CSS阴影效果](https://www.w3school.com.cn/css/css3_shadows.asp)
+
+- `text-shadow`
+- `box-shadow`
+
+
+
+#### [CSS文本效果](https://www.w3school.com.cn/css/css3_text_effects.asp)
+
+CSS文本溢出、整字换行、换行规则以及书写模式
+
+- `text-overflow`
+- `word-wrap`
+- `word-break`
+- `writing-mode`
+
+
+
+#### [CSS  2D 转换](https://www.w3school.com.cn/css/css3_2dtransforms.asp)
+
+##### transform 属性
+
+- `translate()`    将其从当前位置移动元素（根据为X轴和Y轴指定的参数）
+- `rotate()`    根据给定的角度顺时针或逆时针旋转元素
+- `scaleX()`    增加或减少元素的宽度
+- `scaleY()`    增加或减少元素的高度
+- `scale()`    根据给定的宽度和高度参数增加或减少元素的大小
+- `skewX()`   使元素沿X轴倾斜给定角度
+- `skewY()`   使元素沿Y轴倾斜给定角度
+- `skew()`   使元素沿X轴和Y轴倾斜给定角度
+- `matrix()`   此方法把所有的2D变换方法组合为一个，可接受六个参数，使用这些参数可以实现旋转、缩放、移动和倾斜元素，参数如下：matrix( scaleX( ), skewY( ), skewX( ), scaleY( ), tranlateX( ), translateY( ) )
+
+
+
+#### [CSS  3D 转换](https://www.w3school.com.cn/css/css3_3dtransforms.asp)
+
+##### transform属性
+
+- `rotateX()`    将元素绕其X轴旋转给定角度
+- `rotateY()`    将元素绕其Y轴旋转给定角度
+- `rotateZ()`    将元素绕其Z轴旋转给定角度
+
+
+
+#### [CSS过渡](https://www.w3school.com.cn/css/css3_transitions.asp)
+
+
+
+
+
+
+
 
 
 
