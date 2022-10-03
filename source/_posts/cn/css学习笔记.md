@@ -288,7 +288,7 @@ value=capitalize；（每个单词首字母大写）
 
 空白：white-space（指定元素内部空白的处理方式）
 
-##### 文字阴影
+##### [文字阴影](https://www.w3school.com.cn/css/css_text_shadow.asp)
 
 text-shadow
 
@@ -340,6 +340,8 @@ p {
 
 #### CSS 外边距  `margin`  
 
+> 可以是负值
+
 外边距合并：当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
 
 > - margin: 25px 50px 75px 100px;
@@ -358,6 +360,8 @@ p {
 
 #### CSS内边距  `padding`
 
+> 不可为负值
+
 > - padding : 25px  50px  75px  100px;
 >
 > 上内边距25px，右内边距50px，下内边距75px，左内边距100px
@@ -369,6 +373,82 @@ p {
 > - padding：25px  50px；
 >
 > 上下内边距25px，左右内边距50px
+
+
+
+#### [CSS轮廓](https://www.w3school.com.cn/css/css_outline.asp)
+
+CSS轮廓是在元素周围绘制的一条线，在边框之外，以凸显元素。轮廓不计入元素尺寸中，元素的总高度和总宽度不受轮廓宽度的影响。
+
+CSS有如下轮廓属性：
+
+- `outline-style`   轮廓样式（可选择如下值）
+  - `dotted` - 定义点状的轮廓。
+  - `dashed` - 定义虚线的轮廓。
+  - `solid` - 定义实线的轮廓。
+  - `double` - 定义双线的轮廓。
+  - `groove` - 定义 3D 凹槽轮廓。
+  - `ridge` - 定义 3D 凸槽轮廓。
+  - `inset` - 定义 3D 凹边轮廓。
+  - `outset` - 定义 3D 凸边轮廓。
+  - `none` - 定义无轮廓。
+  - `hidden` - 定义隐藏的轮廓。	
+- `outline-color`   轮廓颜色
+- `outline-width`   轮廓宽度
+- `outline-offset`   轮廓偏移
+- `outline`   轮廓简写 （可包含如下值）
+  - `outline-width`
+  - `outline-style`（必需）
+  - `outline-color`
+
+
+
+#### CSS定位
+
+##### position属性(有如下值)
+
+- static (默认值)
+- relative
+- fixed
+
+> 设置此属性值的元素是相对于视口定位的，即使滚动页面，它也始终位于同一位置。top、right、bottom和left属性用于定位此元素。
+
+- absolute
+
+> 需与 `position:relative;`  的祖先元素组合使用
+
+- sticky
+
+> 粘性定位，粘性元素根据滚动位置在相对（relative）和固定（fixed）之间切换。它会被相对定位，知道在视口中遇到给定的偏移位置为止，然后将其“粘贴”在适当的位置。
+
+
+
+#### CSS溢出
+
+##### overflow  overflow-x   overflow-y
+
+> 仅适用于具有指定高度的块元素
+
+- `visible` - 默认。溢出没有被剪裁。内容在元素框外渲染
+- `hidden` - 溢出被剪裁，其余内容将不可见
+- `scroll` - 溢出被剪裁，同时添加滚动条以查看其余内容
+- `auto` - 与 `scroll` 类似，但仅在必要时添加滚动条
+
+
+
+#### Box Sizing
+
+> 定义元素宽度和高度的计算方式，它们是否应包含内边距和边框。
+
+`box-sizing：border-box;`   元素宽度和高度包含内边距和边框
+
+
+
+#### [CSS水平与垂直对齐、居中](https://www.w3school.com.cn/css/css_align.asp)
+
+
+
+
 
 
 
