@@ -9,7 +9,7 @@ tags: JavaScript
 categories: Web
 ---
 
-## JavaScript学习笔记
+
 
 ### JavaScript
 
@@ -1031,7 +1031,7 @@ div.style.bottom = curBottom + 1 + 'px';
 
 > 当我们修改了元素的几何属性，导致浏览器触发重排或重绘时。它会把该操作放进渲染队列，等到队列中的操作到了一定的数量或者到了一定的时间间隔时，浏览器就会批量执行这些操作。
 
-​**3、将 DOM 离线**
+**3、将 DOM 离线**
 
 “离线”意味着不在当前的 DOM 树中做修改，我们可以这样做：
 
