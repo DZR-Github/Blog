@@ -510,6 +510,245 @@ CSS文本溢出、整字换行、换行规则以及书写模式
 
 #### [CSS过渡](https://www.w3school.com.cn/css/css3_transitions.asp)
 
+- ##### transition  
+
+> 简写属性，用于将四个过渡属性设置为单一属性
+>
+> 顺序：property  duration   timing-function   delay
+>
+> 例如：`transition: width 2s linear 1s;`
+
+- ##### transition-delay  
+
+> 规定过渡效果的延迟
+>
+> 例如：`transition-delay: 1s;`
+
+- ##### transition-duration
+
+> 规定过渡效果要持续多久
+>
+> 例如：`transition-duration: 2s;`
+
+- ##### transition-property
+
+> 规定过渡效果所针对的CSS属性的名称
+>
+> 例如：`transition-property: width;`
+
+- ##### transition-timing-function
+
+> 规定过渡效果的速度曲线
+>
+> 例如：`transition-timing-function: linear;`
+>
+> 可接受如下值：
+>
+> - `ease` - 规定过渡效果，先缓慢地开始，然后加速，然后缓慢地结束（默认）
+> - `linear` - 规定从开始到结束具有相同速度的过渡效果
+> - `ease-in` -规定缓慢开始的过渡效果
+> - `ease-out` - 规定缓慢结束的过渡效果
+> - `ease-in-out` - 规定开始和结束较慢的过渡效果
+> - `cubic-bezier(n,n,n,n)` - 允许您在三次贝塞尔函数中定义自己的值
+
+
+
+#### 
+
+#### [CSS 动画](https://www.w3school.com.cn/css/css3_animations.asp)
+
+动画使元素逐渐从一种样式变为另一种样式，可以随意更改任意数量的CSS属性。使用CSS动画时需先为动画指定一些关键帧，关键帧包含元素在特定时间所拥有的样式。
+
+
+
+- ##### @keyframes
+
+> 在`@keyframes`规则中指定CSS样式后，动画将在特定时间逐渐从当前样式更改为新样式。
+>
+> 要使动画生效，必须将动画绑定到某个元素
+>
+> 代码示例：
+>
+> ```css
+> /* 动画代码 */
+> @keyframes example {
+>   from {background-color: red;}
+>   to {background-color: yellow;}
+> }
+> /* 向此元素应用动画效果 */
+> div {
+>   width: 100px;
+>   height: 100px;
+>   background-color: red;
+>   animation-name: example;
+>   animation-duration: 4s;
+> }
+> ```
+
+> 在例子中，通过使用关键字“from”和“to"（代表0%（开始）和100%（完成）），设置样式何时改变，也可使用百分比值，通过使用百分比，可以根据需要添加任意多个样式更改。
+
+> ```css
+> /* 动画代码 */
+> @keyframes example {
+>   0%   {background-color:red; left:0px; top:0px;}
+>   25%  {background-color:yellow; left:200px; top:0px;}
+>   50%  {background-color:blue; left:200px; top:200px;}
+>   75%  {background-color:green; left:0px; top:200px;}
+>   100% {background-color:red; left:0px; top:0px;}
+> }
+> 
+> /* 应用动画的元素 */
+> div {
+>   width: 100px;
+>   height: 100px;
+>   position: relative;
+>   background-color: red;
+>   animation-name: example;
+>   animation-duration: 4s;
+> }
+> ```
+
+- ##### animation-name
+
+  > 规定@keyframes动画的名称
+
+- ##### animation-duration  
+
+  > 定义需要多长时间才能完成动画。
+
+- ##### animation-delay
+
+  > 规定动画开始的延迟时间。
+
+- ##### animation-iteration-count
+
+  > 设置动画应运行多少次，使用值”infinite“将会使动画永远持续下去。
+
+- ##### animation-direction
+
+  > 反向或交替运行动画，该属性指定向前播放、向后播放还是交替播放动画
+  >
+  > 有以下值可供选择：
+  >
+  > - `normal` - 动画正常播放（向前）。默认值
+  > - `reverse` - 动画以反方向播放（向后）
+  > - `alternate` - 动画先向前播放，然后向后
+  > - `alternate-reverse` - 动画先向后播放，然后向前
+
+- ##### animation-timing-function
+
+  > 指定动画的速度曲线，有以下值可供选择：
+  >
+  > - `ease` - 指定从慢速开始，然后加快，然后缓慢结束的动画（默认）
+  > - `linear` - 规定从开始到结束的速度相同的动画
+  > - `ease-in` - 规定慢速开始的动画
+  > - `ease-out` - 规定慢速结束的动画
+  > - `ease-in-out` - 指定开始和结束较慢的动画
+  > - `cubic-bezier(*n*,*n*,*n*,*n*)` - 运行您在三次贝塞尔函数中定义自己的值
+
+- ##### animation-fill-mode
+
+  > 指定动画的填充模式，有以下值可供选择：
+  >
+  > - `none` - 默认值。动画在执行之前或之后不会对元素应用任何样式。
+  > - `forwards` - 元素将保留由最后一个关键帧设置的样式值（依赖 animation-direction 和 animation-iteration-count）。
+  > - `backwards` - 元素将获取由第一个关键帧设置的样式值（取决于 animation-direction），并在动画延迟期间保留该值。
+  > - `both` - 动画会同时遵循向前和向后的规则，从而在两个方向上扩展动画属性
+
+- ##### animation
+
+  > 动画简写属性
+
+  > ```css
+  > div {
+  >   animation: example 5s linear 2s infinite alternate;
+  > }
+  > /*等同于下面的样式*/
+  > ```
+  >
+  > ```css
+  > div {
+  >   animation-name: example;
+  >   animation-duration: 5s;
+  >   animation-timing-function: linear;
+  >   animation-delay: 2s;
+  >   animation-iteration-count: infinite;
+  >   animation-direction: alternate;
+  > }
+  > ```
+
+
+
+
+
+#### CSS   object-fit 属性
+
+该属性用于规定应如何调整`<img>`  或  `<video>`  的大小来适应其容器。
+
+有如下值可供选择：
+
+- `fill` - 默认值。调整替换后的内容大小，以填充元素的内容框。如有必要，将拉伸或挤压物体以适应该对象。
+- `contain` - 缩放替换后的内容以保持其纵横比，同时将其放入元素的内容框。
+- `cover` - 调整替换内容的大小，以在填充元素的整个内容框时保持其长宽比。该对象将被裁剪以适应。
+- `none` - 不对替换的内容调整大小。
+- `scale-down` - 调整内容大小就像没有指定内容或包含内容一样（将导致较小的具体对象尺寸）
+
+
+
+#### [CSS  多列](https://www.w3school.com.cn/css/css3_multiple_columns.asp)
+
+- ##### column-count
+
+  > 规定元素应被划分的列数
+  >
+  > `column-count: 3;`
+
+- ##### column-gap
+
+  > 规定列之间的间隙
+  >
+  > `column-gap: 40px;`
+
+- ##### column-rule-style
+
+  > 规定列之间的规则样式
+  >
+  > `column-rule-style: solid;`
+
+- ##### column-rule-width
+
+  > 规定列之间的规则宽度
+  >
+  > `column-rule-width: 1px;`
+
+- ##### column-rule-color
+
+  > 规定列之间的规则的颜色
+  >
+  > `column-rule-color: lightblue;`
+
+- ##### column-rule
+
+  > 设置列之间的规则的宽度、样式和颜色，简写属性
+  >
+  > `column-rule: 1px solid lightblue;`
+
+- ##### column-span
+
+  > 规定元素应跨多少列
+  >
+  > 可供选择的值：1 、 all
+
+- ##### column-width
+
+  > 为列指定建议的最佳宽度（？跟column-count同时使用会产生冲突）
+
+
+
+
+
+
+
 
 
 
