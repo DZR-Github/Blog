@@ -745,19 +745,74 @@ CSS文本溢出、整字换行、换行规则以及书写模式
 
 
 
+#### CSS  用户界面
+
+- ##### resize
+
+  > 规定元素是否应（以及如何）被用户调整大小
+  >
+  > 在许多浏览器中`<textarea>`  默认可调整大小
+  >
+  > ```css
+  > div {
+  >   resize: horizontal;
+  >   overflow: auto;
+  > }/*只允许用户调整元素的宽度*/
+  > 
+  > div {
+  >   resize: vertical;
+  >   overflow: auto;
+  > }/*只允许用户调整高度*/
+  > 
+  > div {
+  >   resize: both;
+  >   overflow: auto;
+  > }/*允许用户调整宽度和高度*/
+  > ```
+
+- ##### outline-offset
+
+  > CSS 轮廓偏移，此属性在轮廓与元素的边缘边框之间添加空间。
 
 
 
+#### CSS  变量
 
+var()函数用于插入CSS变量的值
 
+> CSS 变量可以有全局或局部作用域。全局变量可以在整个文档中进行访问/使用，而局部变量只能在声明它的选择器内部使用。
+>
+> 如需创建具有全局作用域的变量，在  :root 选择器中声明它。:root  选择器匹配文档的根元素。
+>
+> 如需创建具有局部作用域的变量，在将要使用它的选择器中声明它。
 
+代码示例：
 
+```css
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
 
+body { background-color: var(--blue); }
 
+h2 { border-bottom: 2px solid var(--blue); }
 
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
 
+button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 5px;
+}
+```
 
-
+> 使用var()，可以使代码更易于阅读，使修改颜色值更加容易。
 
 
 
