@@ -778,7 +778,7 @@ CSS文本溢出、整字换行、换行规则以及书写模式
 
 #### CSS  变量
 
-var()函数用于插入CSS变量的值
+var()函数用于插入CSS变量的值，CSS变量可通过 JavaScript 修改
 
 > CSS 变量可以有全局或局部作用域。全局变量可以在整个文档中进行访问/使用，而局部变量只能在声明它的选择器内部使用。
 >
@@ -813,6 +813,125 @@ button {
 ```
 
 > 使用var()，可以使代码更易于阅读，使修改颜色值更加容易。
+
+##### 覆盖变量
+
+若局部变量的名称与全局变量的名称一样时，全局变量将会被覆盖，使用局部变量的值。
+
+
+
+
+
+#### [CSS  Flexbox](https://www.w3school.com.cn/css/css3_flexbox.asp)
+
+通过将display属性设置为flex，flex容器将可伸缩。
+
+- ##### flex-direction
+
+> 定义容器在哪个方向堆叠flex项目
+
+| 值             | 排列方向 |
+| -------------- | -------- |
+| column         | 从上到下 |
+| column-reverse | 从下到上 |
+| row            | 从左到右 |
+| row-reverse    | 从右到左 |
+
+- ##### flex-wrap
+
+> 规定flex项目是否应该换行
+>
+> 可供选择的值：wrap   nowrap   wrap-reverse
+
+- ##### flex-flow
+
+> flex-flow 属性是用于同时设置 flex-direction 和 flex-wrap 属性的简写属性。
+
+- ##### justify-content
+
+> 用于对齐flex项目
+>
+> - center：中心对齐
+> - flex-start：在容器的开头对齐（默认值）
+> - flex-end：在容器的末端对齐
+> - space-around：显示行之前、之间和之后带有空格的flex项目
+> - space-between：显示行之间带有空格的flex项目
+
+- ##### align-items
+
+> 用于垂直对齐flex项目
+>
+> - center：将flex项目在容器中间对齐
+> - flex-start：将flex项目在容器顶部对齐
+> - flex-end：将弹性项目在容器底部对齐
+> - stretch：拉伸flex项目以填充容器（默认）
+> - baseline：使项目基线对齐（项目的第一行文字的基线对齐）
+
+- ##### align-content
+
+> 用于对齐弹性线
+>
+> - space-between：显示的弹性线之间有相等的间距
+> - space-around：显示弹性线在其之前、之间和之后带有空格
+> - stretch：拉伸弹性线以占据剩余空间（默认）
+> - center：在容器中间显示弹性线
+> - flex-start：在容器的开头显示弹性线
+> - flex-end：在容器的末尾显示弹性线
+
+flex容器的直接子元素会自动成为弹性（flex）项目
+
+弹性项目的属性
+
+- ##### order
+
+> order属性规定flex项目的顺序
+
+- ##### flex-grow
+
+> 规定某个flex项目相对于其余flex项目将增长多少
+
+- ##### flex-shrink
+
+> 规定某个flex项目相对于其余flex项目将收缩多少
+
+- ##### flex-basis
+
+> 规定弹性项目的初始长度
+
+- ##### flex
+
+> flex 属性是 flex-grow、flex-shrink 和 flex-basis 属性的简写属性。
+
+- ##### align-self
+
+> 规定弹性容器所选项目的对齐方式，此属性将覆盖容器的align-items属性所设置的默认对齐方式
+
+
+
+
+
+
+
+#### [CSS 媒体查询](https://www.w3school.com.cn/cssref/pr_mediaquery.asp)
+
+@media 规则在媒体查询中用于为不同的媒体类型/设备应用不同的样式。
+
+媒体查询可用于检查许多事情，诸如：
+
+- 视口的宽度和高度
+- 设备的宽度和高度
+- 方向（手机或平板电脑处于横屏还是竖屏模式？）
+- 分辨率
+
+使用媒体查询是一种流行的技术，用于向台式机、笔记本电脑、平板电脑和手机提供定制的样式表（响应式网页设计）。
+
+
+
+
+
+
+
+
 
 
 
