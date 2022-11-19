@@ -1,7 +1,7 @@
 ---
 title: CSS学习笔记
 catalog: true
-index_img: /img/car_3.png
+index_img: /img/star_3.jpg
 banner_img: /img/wave_bg1.jpg
 date: 2022-10-03 08:58:57
 subtitle:

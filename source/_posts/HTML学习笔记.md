@@ -3,7 +3,7 @@ title: HTML学习笔记
 catalog: true
 date: 2022-09-19 19:46:16
 subtitle: 
-index_img: /img/car_2.jpg
+index_img: /img/star_4.jpg
 banner_img: /img/lanscape_1.jpg
 tags: HTML
 categories: Web
